@@ -39,6 +39,7 @@ dl, ol, ul {
 }
 $c-1:#ec0705;
 $c-2:#ffcd01;
+$den :#111;
 /* =============================HEADER==================================== */
 header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0,0,0,0.9)), url(https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
@@ -48,12 +49,30 @@ header{
     color: #fff;
 }
 .header {
+    position:fixed;
     width: 100%;
     height: 100px;
     align-items: center;
     display: grid;
     grid-template-columns: .2fr 1fr 1fr .2fr;
     grid-gap: 10px;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+.header.sticky{
+    background-color: #fff;
+    height:80px;
+    color:#111111;
+    box-shadow: 0 10px 25px rgba(0, 0, 0,0.4);
+    .btn-menu span{
+        background:#111111 !important;
+    }
+    .brand{
+        color: #111111;
+    }
+    .menu .menu-link{
+        color:#111111;
+    }
 }
 .btn-menu{
     display: block;
@@ -151,6 +170,7 @@ header{
     }
 }
 .header-layout {
+    padding-top: 5rem;
     height: auto;
     width: 100%;
     position: relative;
@@ -497,10 +517,10 @@ header{
         height:0;
         width: 100%;
         background:#fff;
-        box-shadow: 0 5px 5px rgba(255,255,255,0.3);
+        box-shadow: 0 5px 5px rgba(0,0,0,0.3);
         margin-left: 0;
         left:0;
-        top: 100px;
+        top: 80px;
         text-align: left !important;
         z-index: 999;
         // opacity: 0;

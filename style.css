@@ -57,12 +57,31 @@ header {
 }
 
 .header {
+  position: fixed;
   width: 100%;
   height: 100px;
   align-items: center;
   display: grid;
   grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
   grid-gap: 10px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.header.sticky {
+  background-color: #fff;
+  height: 80px;
+  color: #111111;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.header.sticky .btn-menu span {
+  background: #111111 !important;
+}
+.header.sticky .brand {
+  color: #111111;
+}
+.header.sticky .menu .menu-link {
+  color: #111111;
 }
 
 .btn-menu {
@@ -160,6 +179,7 @@ header {
 }
 
 .header-layout {
+  padding-top: 5rem;
   height: auto;
   width: 100%;
   position: relative;
@@ -493,10 +513,10 @@ header {
     height: 0;
     width: 100%;
     background: #fff;
-    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
     margin-left: 0;
     left: 0;
-    top: 100px;
+    top: 80px;
     text-align: left !important;
     z-index: 999;
   }
