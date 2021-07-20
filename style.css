@@ -56,6 +56,12 @@ header {
   color: #fff;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -501,26 +507,31 @@ header {
   grid-template-columns: 100%;
   grid-gap: 30px 0;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
 .card {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 10px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 12px 44px 2px;
 }
 
 .card-media {
   width: 40%;
-  height: 250px;
+  height: 220px;
   position: relative;
   border-radius: inherit;
   overflow: hidden;
@@ -535,13 +546,13 @@ header {
 }
 
 .card-number {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 100rem;
   position: absolute;
   background: #fff;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -564,8 +575,13 @@ header {
   margin-bottom: 15px;
 }
 
+.card-live, .card-category {
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .card-live {
-  background-color: #e63532;
+  background-color: #FF754C;
   color: #fff;
   border-radius: 6px;
   padding: 5px 10px;
@@ -595,11 +611,12 @@ header {
 .card-time {
   color: #999;
   margin: 0 10px 10px 5px;
+  font-size: 13px;
 }
 
 .card-watch span {
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   background-color: #16e77f;
   border-radius: 100%;
   display: inline-block;
@@ -610,8 +627,8 @@ header {
 .card-time span {
   display: inline-block;
   vertical-align: middle;
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   background-color: #169dd3;
   border-radius: 100%;
   margin-right: 5px;
@@ -647,13 +664,13 @@ header {
 
 .card-social {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 80px;
+  height: 100%;
+  padding: 8px;
   flex-direction: column;
   border-radius: inherit;
-  background-color: #a72be0;
-  height: 100%;
+  background-color: #6C5DD3;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   opacity: 0;
   visibility: hidden;
@@ -667,16 +684,13 @@ header {
 
 .card-social-item {
   flex: 1;
-  vertical-align: middle;
   font-size: 20px;
   color: #fff;
-  padding: 10px 20px;
   border-radius: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 10px 0;
   transition: all 0.2s ease;
 }
 
@@ -830,6 +844,35 @@ header {
 
   .food-list {
     grid-template-columns: 100% !important;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 0 0 10px 0;
+    align-items: unset;
+  }
+
+  .card-media {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-number {
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-social {
+    flex-direction: row;
+    width: auto;
+    height: 80px;
+    margin: 0 10px;
   }
 }
 
