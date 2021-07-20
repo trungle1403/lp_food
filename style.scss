@@ -37,6 +37,12 @@ dl, ol, ul {
     margin-bottom:0 !important;
     padding: 0 !important;
 }
+.text-c{
+    text-align: center;
+}
+.mb-10{
+    margin-bottom: 10px !important;
+}
 $c-1:#ec0705;
 $c-2:#ffcd01;
 $den :#111;
@@ -241,6 +247,7 @@ header{
         font-weight: 700;
         width:fit-content;
         border-radius:4px;
+        margin-top: 10px;
     }
     
 }
@@ -581,7 +588,9 @@ header{
     padding: 5px 10px;
     margin-right: 10px;
 }
-
+.card-live i {
+    margin-right: 5px;
+}
 .card-category{
     color:#169dd3;
     background-color: #169dd338;
@@ -693,6 +702,7 @@ header{
 @media screen and (max-width: 1023px) {
     .header{
         grid-template-columns: .2fr 1fr .2fr;
+        padding: 0px 10px;
     }
     .menu{
         position:absolute !important;
@@ -706,8 +716,6 @@ header{
         top: 80px;
         text-align: left !important;
         z-index: 999;
-        // opacity: 0;
-        // visibility: hidden;
         .menu-link{
             position: relative;
             padding:10px !important;
@@ -716,15 +724,15 @@ header{
             font-size: 1.5rem;
             margin-bottom: 10px;
             opacity: 0;
+            visibility: hidden;
         }
     }
     .menu.active{
         height:fit-content;
-        // opacity: 1;
-        // visibility: visible;
     }
     .menu.active .menu-link{
         opacity: 1;
+        visibility: visible;
     }
     .header-content {
         width: 100%;
@@ -747,7 +755,8 @@ header{
         grid-gap: 50px !important;
         margin-left: 0 !important;
         .product-item{
-            max-width: 350px !important;
+            width: 80% !important;
+            max-width: 300px;
             justify-self: center;
         }
     }

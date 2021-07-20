@@ -47,6 +47,14 @@ dl, ol, ul {
   padding: 0 !important;
 }
 
+.text-c {
+  text-align: center;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
 /* =============================HEADER==================================== */
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
@@ -251,6 +259,7 @@ header {
   font-weight: 700;
   width: fit-content;
   border-radius: 4px;
+  margin-top: 10px;
 }
 
 .header-product {
@@ -588,6 +597,10 @@ header {
   margin-right: 10px;
 }
 
+.card-live i {
+  margin-right: 5px;
+}
+
 .card-category {
   color: #169dd3;
   background-color: #169dd338;
@@ -711,6 +724,7 @@ header {
 @media screen and (max-width: 1023px) {
   .header {
     grid-template-columns: 0.2fr 1fr 0.2fr;
+    padding: 0px 10px;
   }
 
   .menu {
@@ -734,6 +748,7 @@ header {
     font-size: 1.5rem;
     margin-bottom: 10px;
     opacity: 0;
+    visibility: hidden;
   }
 
   .menu.active {
@@ -742,6 +757,7 @@ header {
 
   .menu.active .menu-link {
     opacity: 1;
+    visibility: visible;
   }
 
   .header-content {
@@ -769,7 +785,8 @@ header {
     margin-left: 0 !important;
   }
   .product-content .product-item {
-    max-width: 350px !important;
+    width: 80% !important;
+    max-width: 300px;
     justify-self: center;
   }
 
